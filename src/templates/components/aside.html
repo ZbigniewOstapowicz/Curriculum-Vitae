@@ -1,41 +1,43 @@
 <div class="wrapper wrapper-flex">
-    <aside>
+    <aside class="aside">
         <div class="wrapper">
             <div class="text-center">
-                <h1>Zbigniew Ostapowicz</h1>
+                <h1 class="aside__h1">Zbigniew Ostapowicz</h1>
                 <!-- Swoje zdjęcie umieść w ./src/img i uruchom gulpa, by zoptymalizował je -->
                 <!-- Jeśli nie używasz gulpa, wstaw zdjęcie do ./dist/img -->
-                <img src="dist/img/cv.jpg" alt="Photo">
+                <img class="aside__img" src="../img/cv.jpg" alt="Photo">
             </div>
-            <ul class="aside__list">
-                <li>
-                    <i class="fa fa-globe fa-fw"></i> <a href="javascript:void(0)">ZbigniewO.pl</a>
+            <ul class="aside__list list">
+                <li class="list__item">
+                    <i class="fa fa-globe fa-fw list__icon"></i>
+                    <a href="javascript:void(0) list__link">ZbigniewO.pl</a>
                 </li>
-                <li>
+                <li class="list__item">
                     <!-- wewnątrz href podaj adres e-mail poprzedzony mailto: -->
                     <!-- np. href="mailto:adres@domena.com" -->
-                    <i class="fa fa-envelope fa-fw"></i>
-                    <a href="mailto:zbigniewostapowicz1@gmail.com">zbigniewostapowicz1@gmail.com</a>
+                    <i class="fa fa-envelope fa-fw list__icon"></i>
+                    <a class="list__link" href="mailto:zbigniewostapowicz1@gmail.com list__link">zbigniewostapowicz1@gmail.com</a>
                 </li>
-                <li>
-                    <i class="fa fa-phone fa-fw"></i> +48 666 666 666
+                <li class="list__item">
+                    <i class="fa fa-phone fa-fw list__icon"></i> +48 666 666 666
                 </li>
-                <li>
-                    <i class="fa fa-map-marker fa-fw"></i> Białystok, Polska
+                <li class="list__item">
+                    <i class="fa fa-map-marker fa-fw list__icon"></i> Białystok, Polska
                 </li>
-                <li>
-                    <i class="fa fa-calendar fa-fw"></i> 17.03.1985
+                <li class="list__item">
+                    <i class="fa fa-calendar fa-fw list__icon"></i> 17.03.1985
                 </li>
             </ul>
         </div>
-        <div class="social">
-            <ul>
-                <li>
-                    <i class="fa fa-facebook fa-fw"></i> <a href="https://fb.com/username">fb.com/username</a>
+        <div class="aside__social">
+            <ul class="aside__list list">
+                <li class="list__item">
+                    <i class="fa fa-facebook fa-fw list__icon"></i>
+                    <a class="list__link" href="https://fb.com/username list__link">fb.com/username</a>
                 </li>
-                <li>
-                    <i class="fa fa-linkedin fa-fw"></i>
-                    <a href="https://linkedin.com/in/username">https://www.linkedin.com/in/zbigniew-ostapowicz-663859188</a>
+                <li class="list__item">
+                    <i class="fa fa-linkedin fa-fw list__icon"></i>
+                    <a class="list__link" href="https://linkedin.com/in/username">https://www.linkedin.com/in/zbigniew-ostapowicz-663859188</a>
                 </li>
             </ul>
         </div>
