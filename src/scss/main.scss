@@ -101,10 +101,18 @@
         }
     }
 
+    .skills__wrapper {
+        margin-left: 5mm;
+    }
+
     .container {
         display: -webkit-flex;
         display: -ms-flex;
         display: flex;
+    }
+
+    .skills__text {
+        line-height: 1.5;
     }
 
     .col-1-2 {
