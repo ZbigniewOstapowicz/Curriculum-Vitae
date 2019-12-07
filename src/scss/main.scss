@@ -1,16 +1,15 @@
-main {
+.main {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     flex-basis: 75%;
     flex-direction: column;
     position: relative;
-
     background-color: $primary-white;
     color: $primary-black;
     padding: 3mm 5mm 3mm 10mm;
 
-    a {
+    .main__link {
         color: $secondary-color;
 
         @media print {
@@ -18,7 +17,7 @@ main {
         }
     }
 
-    h2 {
+    .main__h2 {
         line-height: 1;
         margin: 5px 0;
         z-index: 2;
@@ -29,21 +28,9 @@ main {
         }
     }
 
-    h2:nth-of-type(1)::before {
-        display: inline-block;
+    .experience::before {
         content: "\f0ad ";
-        color: #fff;
-        background-color: #000;
-        padding: 6px;
-        margin: 0;
-        border-radius: 50%;
-        font-family: FontAwesome;
-        margin: 0mm 2mm 0 -9mm;
-        font-size: 22px;
-        vertical-align: middle;
-        border: 3px gray solid;
-        width: 25px;
-        height: 25px;
+        @include round-icon;
 
     }
 
@@ -66,78 +53,44 @@ main {
         }
     }
 
-    h2:nth-of-type(2)::before {
-        display: inline-block;
+    .education::before {
         content: "\f19d";
-        color: white;
-        background-color: #000;
-        padding: 6px;
-        margin: 0;
-        border-radius: 50%;
-        font-family: FontAwesome;
-        margin: 0mm 2mm 0 -9mm;
-        font-size: 22px;
-        vertical-align: middle;
-        border: 3px gray solid;
-        width: 25px;
-        height: 25px;
+        @include round-icon;
+
 
     }
 
-    h2:nth-of-type(3)::before {
-        display: inline-block;
+    .projects::before {
         content: "\f121";
-        color: white;
-        background-color: #000;
-        padding: 6px;
-        margin: 0;
-        border-radius: 50%;
-        font-family: FontAwesome;
-        margin: 0mm 2mm 0 -9mm;
-        font-size: 22px;
-        vertical-align: middle;
-        border: 3px gray solid;
-        width: 25px;
-        height: 25px;
-
+        @include round-icon;
     }
 
-    h2:nth-of-type(4)::before {
-        display: inline-block;
+    .skills::before {
         content: "\f256";
-        color: white;
-        background-color: #000;
-        padding: 6px;
-        margin: 0;
-        border-radius: 50%;
-        font-family: FontAwesome;
-        margin: 0mm 2mm 0 -9mm;
-        font-size: 22px;
-        vertical-align: middle;
-        border: 3px gray solid;
-        width: 25px;
-        height: 25px;
-
+        @include round-icon;
     }
 
     .github {
         margin-top: 2.5mm;
     }
 
-    h3 {
-        margin: 0px 0;
+    .main__h3 {
+        margin: 5px 0;
+        font-weight: bold;
+        line-height: 1.5;
+        font-size: 1.2rem;
     }
 
-    ul {
+    .main__list {
         list-style-type: square;
         margin: 0;
         padding: 0;
         padding-left: 20px;
 
-        li {
+        .list__item {
             line-height: 1.5;
 
-            span,
+
             .position {
                 color: lighten($primary-black, 25%);
             }
@@ -156,5 +109,6 @@ main {
 
     .col-1-2 {
         flex-basis: 50%;
+        color: $primary-black;
     }
 }
