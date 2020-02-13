@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var nunjacksRender = require('gulp-nunjucks-render');
+var deploy = require('gulp-deploy-git');
 
 gulp.task('img', function () {
  return gulp.src('./src/img/**/*')
@@ -38,6 +39,18 @@ gulp.task('nunjucks', function() {
       path: ['src/templates']
     }))
     .pipe(gulp.dest('./web'))
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('build/**/*',{ read: false })
+    .pipe(deploy({
+      repository: 'https://github.com/ZbigniewOstapowicz/Curriculum-Vitae',
+      prefix: 'build',
+      remoteBranch: 'master',
+      branches: ['develop','1.01'],
+      verbose: true,
+      debug: true
+    }));
 });
 
 gulp.task('build', gulp.series('img', 'fonts', 'sass', 'nunjucks', 'js', (done)=> {
