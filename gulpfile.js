@@ -42,10 +42,10 @@ gulp.task('nunjucks', function() {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('build/**/*',{ read: false })
+  return gulp.src('web/**/*',{ read: false })
     .pipe(deploy({
       repository: 'https://github.com/ZbigniewOstapowicz/Curriculum-Vitae',
-      prefix: 'build',
+      prefix: 'web',
       remoteBranch: 'master',
       branches: ['develop','1.01'],
       verbose: true,
